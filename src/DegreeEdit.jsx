@@ -1,7 +1,7 @@
 import InputField from "./InputField";
 import { useState } from "react";
 
-function DegreeEdit({ data, setData, id }) {
+function DegreeEdit({ data, setData, id, setOpen }) {
   const [degreeData, setDegreeData] = useState(
     {
       0: data.degree[id][0],
@@ -53,9 +53,15 @@ function DegreeEdit({ data, setData, id }) {
         setData={setDegreeData}
         PIID="4"
       ></InputField>
+      <button onClick={()=>setOpen(-1)}>Close</button>
       <button
         onClick={() =>
-          setData({ ...data, degree: { ...data.degree, [id]: degreeData } })
+        {
+          const object = { ...data, degree: [ ...data.degree] }
+          object.degree[id]= degreeData;
+          setData(object)
+        }
+          
         }
       >
         Submit

@@ -17,3 +17,4 @@ function InputField({ label, type, placeholder, data, setData, PIID }) {
 
 export default InputField;
 //TODO:change PIID
+// add id to label
