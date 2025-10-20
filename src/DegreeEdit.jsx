@@ -1,11 +1,19 @@
 import InputField from "./InputField";
 import { useState } from "react";
 
-function DegreeEdit({data, setData, id}){
-    const [degreeData, setDegreeData] = useState([{0: "", 1:"", 2:"", 3:"", 4:""}])
-    return (
-        <div className="degree-edit-cont">
-        <InputField
+function DegreeEdit({ data, setData, id }) {
+  const [degreeData, setDegreeData] = useState(
+    {
+      0: data.degree[id][0],
+      1: data.degree[id][1],
+      2: data.degree[id][2],
+      3: data.degree[id][3],
+      4: data.degree[id][4],
+    },
+  );
+  return (
+    <div className="degree-edit-cont">
+      <InputField
         type="text"
         label="School Name"
         placeholder="Enter school name"
@@ -19,7 +27,6 @@ function DegreeEdit({data, setData, id}){
         placeholder="Enter your degree"
         data={degreeData}
         setData={setDegreeData}
-        
         PIID="1"
       ></InputField>
       <InputField
@@ -28,7 +35,6 @@ function DegreeEdit({data, setData, id}){
         // placeholder=""
         data={degreeData}
         setData={setDegreeData}
-        
         PIID="2"
       ></InputField>
       <InputField
@@ -37,7 +43,6 @@ function DegreeEdit({data, setData, id}){
         // placeholder="City, Country"
         data={degreeData}
         setData={setDegreeData}
-        
         PIID="3"
       ></InputField>
       <InputField
@@ -48,9 +53,15 @@ function DegreeEdit({data, setData, id}){
         setData={setDegreeData}
         PIID="4"
       ></InputField>
-      <button onClick={() => setData({ ...data, degree: {...data.degree, [id]: degreeData}})}>Submit</button>
-      </div>
-    )
+      <button
+        onClick={() =>
+          setData({ ...data, degree: { ...data.degree, [id]: degreeData } })
+        }
+      >
+        Submit
+      </button>
+    </div>
+  );
 }
 
-export default DegreeEdit
+export default DegreeEdit;

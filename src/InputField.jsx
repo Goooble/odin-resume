@@ -1,5 +1,5 @@
 function InputField({ label, type, placeholder, data, setData, PIID }) {
-    
+    // console.log(data)
   return (
     <div>
       <label htmlFor={label.replace(/\s/g, "") + "-input-ID"}>{label}</label>
@@ -9,7 +9,7 @@ function InputField({ label, type, placeholder, data, setData, PIID }) {
         }}
         type={type}
         id={label.replace(/\s/g, "") + "-input-ID"}
-        // value={value}
+        value={data[PIID]}
         placeholder={placeholder}
       />
     </div>
