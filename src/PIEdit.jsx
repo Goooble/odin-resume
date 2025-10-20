@@ -1,12 +1,13 @@
 import InputField from "./InputField";
 import { useState } from "react";
-
+import './editBlock.css'
 function PIEdit({ data, setData }) {
   const [PIData, setPIData] = useState({ 0: "hello", 1: "world", 2: "", 3: "" });
 
   return (
-    <div>
+    <div className="PI-cont">
       <h2>Personal Information</h2>
+      <div className="pi-field-cont">
       <InputField
         type="text"
         label="Full Name"
@@ -39,6 +40,7 @@ function PIEdit({ data, setData }) {
         setData={setPIData}
         PIID="3"
       ></InputField>
+      </div>
       <button onClick={() => setData({ ...data, PI: PIData })}>Submit</button>
     </div>
   );

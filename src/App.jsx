@@ -27,7 +27,6 @@ function App() {
     ],
   });
 
-  console.log(data)
   return (
     <>
       <div className="edit-container">

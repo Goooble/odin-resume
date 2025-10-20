@@ -1,0 +1,6 @@
+.pi-class>div, .education-class>div>div{
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+

@@ -1,6 +1,7 @@
 import DegreeEdit from "./DegreeEdit";
 import DisplayHidden from "./DisplayHidden";
 import { useState } from "react";
+import './editBlock.css'
 function EducationEdit({ data, setData }) {
   const [open, setOpen] = useState(-1);
   const degree = [];
@@ -29,8 +30,9 @@ function EducationEdit({ data, setData }) {
     }
   }
   return (
-    <>
+    <div className="education-cont">
       <h2>Education</h2>
+      <div className="education-field-cont">
       {degree}
       <button
         onClick={() => {
@@ -46,7 +48,8 @@ function EducationEdit({ data, setData }) {
       >
         Add Education
       </button>
-    </>
+      </div>
+    </div>
   );
 }
 
