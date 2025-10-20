@@ -54,12 +54,21 @@ function DegreeEdit({ data, setData, id, setOpen }) {
         PIID="4"
       ></InputField>
       <button onClick={()=>setOpen(-1)}>Close</button>
+      <button onClick={()=>{
+        const object = { ...data, degree: [ ...data.degree] }
+        object.degree = object.degree.filter((item, index)=>{
+            return index==id?false:true
+        })
+        
+        setData(object)
+      }}>Delete</button>
       <button
         onClick={() =>
         {
           const object = { ...data, degree: [ ...data.degree] }
           object.degree[id]= degreeData;
           setData(object)
+          setOpen(-1)
         }
           
         }

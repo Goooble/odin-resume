@@ -7,7 +7,6 @@ function EducationEdit({ data, setData }) {
 //   console.log(open);
   for (const key in data.degree) {
     if(open==key){
-        console.log("callec")
         degree.push(
           <DegreeEdit
             key={key}
@@ -40,7 +39,7 @@ function EducationEdit({ data, setData }) {
             ...data,
             degree: [
               ...data.degree,
-              { 0: "", 1: "", 2: "", 3: "", 4: "" },
+              { 0: "New Education", 1: "", 2: "", 3: "", 4: "" },
             ],
           });
         }}
