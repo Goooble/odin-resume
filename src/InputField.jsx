@@ -1,14 +1,14 @@
-function InputField({ label, type, placeholder, PIData, setPIData, PIID }) {
+function InputField({ label, type, placeholder, data, setData, PIID }) {
     
   return (
     <div>
-      <label htmlFor={label + "-input-ID"}>{label}</label>
+      <label htmlFor={label.replace(/\s/g, "") + "-input-ID"}>{label}</label>
       <input
         onChange={(e) => {
-            setPIData({...PIData, [PIID]: e.target.value});
+            setData({...data, [PIID]: e.target.value});
         }}
         type={type}
-        id={label + "-input-ID"}
+        id={label.replace(/\s/g, "") + "-input-ID"}
         placeholder={placeholder}
       />
     </div>

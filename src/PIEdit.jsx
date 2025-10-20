@@ -11,32 +11,32 @@ function PIEdit({ data, setData }) {
         type="text"
         label="Full Name"
         placeholder="Enter name"
-        PIData={PIData}
-        setPIData={setPIData}
+        data={PIData}
+        setData={setPIData}
         PIID="0"
       ></InputField>
       <InputField
         type="email"
         label="Email"
         placeholder="Enter email"
-        PIData={PIData}
-        setPIData={setPIData}
+        data={PIData}
+        setData={setPIData}
         PIID="1"
       ></InputField>
       <InputField
         type="phone"
         label="Phone Number"
         placeholder="+91"
-        PIData={PIData}
-        setPIData={setPIData}
+        data={PIData}
+        setData={setPIData}
         PIID="2"
       ></InputField>
       <InputField
         type="text"
         label="Address"
         placeholder="City, Country"
-        PIData={PIData}
-        setPIData={setPIData}
+        data={PIData}
+        setData={setPIData}
         PIID="3"
       ></InputField>
       <button onClick={() => setData({ ...data, PI: PIData })}>Submit</button>

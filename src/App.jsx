@@ -9,15 +9,17 @@ import EducationEdit from "./EducationEdit";
 function App() {
   const [data, setData] = useState({
     PI: { 0: "", 1: "", 2: "", 3: "" },
-    degree: {
-      0: { 0: "school", 1: "degree", 2: "start", 3: "end", 4: "location" },
-    },
+    degree: {0:{
+    }}
   });
+
+  console.log(data)
   return (
     <>
       <div className="edit-container">
         <PIEdit data={data} setData={setData}></PIEdit>
-
+        
+        <EducationEdit data={data} setData={setData}></EducationEdit>
       </div>
       <Resume data={data}></Resume>
     </>

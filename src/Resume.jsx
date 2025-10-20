@@ -20,8 +20,10 @@ function Resume({ data }) {
           <h3>Address:</h3>
           <p>{data.PI[3]}</p>
         </div>
+        <hr />
         <div className="education-class">
-            <EducationBlock data={data} id={0}></EducationBlock>
+            <h2>Education</h2>
+            <EducationBlock data={data}></EducationBlock>
         </div>
       </div>
     </div>
