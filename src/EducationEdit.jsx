@@ -1,9 +1,12 @@
 import DegreeEdit from "./DegreeEdit"
 function EducationEdit({data, setData}){
+    const degree = [];
+    for(const key in data.degree){
+        degree.push(<DegreeEdit key={key} data={data} setData={setData} id={key}></DegreeEdit>)
+    }
     return (
         <>
-        <DegreeEdit data={data} setData={setData} id={0}></DegreeEdit>
-        <DegreeEdit data={data} setData={setData} id={1}></DegreeEdit>
+        {degree}
         </>
     )
 }

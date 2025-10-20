@@ -3,7 +3,6 @@ import { useState } from "react";
 
 function DegreeEdit({data, setData, id}){
     const [degreeData, setDegreeData] = useState([{0: "", 1:"", 2:"", 3:"", 4:""}])
-
     return (
         <div className="degree-edit-cont">
         <InputField
@@ -20,6 +19,7 @@ function DegreeEdit({data, setData, id}){
         placeholder="Enter your degree"
         data={degreeData}
         setData={setDegreeData}
+        
         PIID="1"
       ></InputField>
       <InputField
@@ -28,6 +28,7 @@ function DegreeEdit({data, setData, id}){
         // placeholder=""
         data={degreeData}
         setData={setDegreeData}
+        
         PIID="2"
       ></InputField>
       <InputField
@@ -36,6 +37,7 @@ function DegreeEdit({data, setData, id}){
         // placeholder="City, Country"
         data={degreeData}
         setData={setDegreeData}
+        
         PIID="3"
       ></InputField>
       <InputField

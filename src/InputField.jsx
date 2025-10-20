@@ -9,6 +9,7 @@ function InputField({ label, type, placeholder, data, setData, PIID }) {
         }}
         type={type}
         id={label.replace(/\s/g, "") + "-input-ID"}
+        // value={value}
         placeholder={placeholder}
       />
     </div>
@@ -16,3 +17,4 @@ function InputField({ label, type, placeholder, data, setData, PIID }) {
 }
 
 export default InputField;
+//TODO:change PIID
